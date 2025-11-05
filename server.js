@@ -7,7 +7,7 @@ const {connectRedis} = require('./src/config/redis');
 (async () => {
     await connectRedis();
 
-    app.listen(process.env.PORT, (err) => {
+    app.listen(process.env.PORT || 8080, (err) => {
     if(err) {
         console.log(`🔴 Error Occurred: ${err}` );
         return;
