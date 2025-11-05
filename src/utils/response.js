@@ -17,7 +17,7 @@ function created(res, message = 'Resource created', data = {}) {
 }
 
 function badRequest(res, message = 'Bad Request') {
-  return res.status(CONSTANTS.STATUSCODE.BADREQUEST).json({
+  return res.status(CONSTANTS.STATUSCODE.BAD_REQUEST).json({
     status: false,
     message,
   });
